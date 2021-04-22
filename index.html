@@ -8,7 +8,7 @@
 </head>
 <body>
     <article class="banner">
-        <img class="banner__logo" src="images/banner-logo.png" alt="Логотип">
+        <a class="banner__logo" href="#"></a>
         <div class="banner__discount">
             <div class="banner__title">
                 <h2 class="banner__main-title">Получите <span class="banner__span-accent">скидку <span class="banner__span-font-size">до</span> 10%</span></h2>
@@ -16,24 +16,23 @@
             </div>
         <div class="banner__info">
             <p class="banner__text">Или уточните вашу скидку у менеджера по телефону:</p>
-            <p class="banner__phone">+7 (495) 128-83-80</p>   
+            <a class="banner__phone" href="tel:+7(495)128-83-80">+7 (495) 128-83-80</a>  
         </div>
         </div>
         <div class="banner__arrow"></div>
         <form class="banner-form" name="banner-form">
             <h2 class="banner-form__title">Перезвоним в течении 25 секунд!</h2>
             <div class="banner-form__overlay">
-            <input class="banner-form__input" type="text" placeholder="+7 (385) 589-35-75">
-            <p class="banner-form__input-title">Ваш номер телефона</p>
+            <input class="banner-form__input" id="phone" type="text" placeholder="+7 (385) 589-35-75">
+            <label class="banner-form__input-title" for="phone">Ваш номер телефона</label>
             </div>
             <button class="banner-form__button" type="submit">Получить скидку</button>
             <div class="banner-form__subtitle">
-                <label class="banner-form__label">
-                    <input class="banner-form__checkbox" type="checkbox" checked>
-                    <span class="visible-checkbox">
-                        <div class="visible-checkbox__block"></div>
-                    </span> 
-                    Даю согласие на обработку персональных данных</label>
+                <label class="container">
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    <span class="container__text">Даю согласие на обработку персональных данных</span>
+                </label>
             </div>
         </form>
     </article>

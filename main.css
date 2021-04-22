@@ -1,18 +1,34 @@
+@import url(./font/fonts.css);
+
+
 .banner {
     padding: 15px;
     box-sizing: border-box;
     max-width: 1348px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: rgb(34, 34, 34, .4);
     font-family: 'Montserrat';
+    font-weight: 500;
+    color: #fff;
 }
 
 .banner__logo {
+    display: block;
     width: 144px;
     height: 144px;
     margin-right: 27px;
+    background-image: url(images/banner-logo.png);
+    background-size: 144px 144px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+.banner__logo:hover {
+    opacity: .7;
 }
 
 .banner__discount {
@@ -27,7 +43,6 @@
     font-size: 18px;
     line-height: 1.6;
     font-weight: normal;
-    color: #fff;
 
 }
 
@@ -46,17 +61,16 @@
     font-size: 18px;
     line-height: 1.6;
     font-weight: normal;
-    color: #fff;
 }
 
 .banner__info {
     padding-top: 33px;
-    width: 202px;
 }
 
 .banner__text {
     margin: 0;
     padding: 0;
+    max-width: 202px;
     font-size: 14px;
     line-height: 1.78;
     font-weight: normal;
@@ -66,29 +80,42 @@
 .banner__phone {
     margin: 0;
     padding: 7px 0 0 0;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid #80312F;
     font-size: 22px;
     line-height: 1.21;
     font-weight: normal;
     color: #f23c37;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
 }
+
+.banner__phone:hover {
+    opacity: .7;
+}
+
+.banner__phone:focus {
+    opacity: .7;
+}
+
 
 .banner__arrow {
     width: 169.1px;
-    height: 90px;
+    height: 130px;
     background-image: url(images/banner-arrow.svg);
-    background-size: 169.1px 100px;
+    background-size: 169.1px 130px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .banner-form__title {
     margin: 0;
-    padding: 0 0 13.5px 0;
+    padding: 0 0 27px 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-size: 16px;
     line-height: 1.5625;
-    font-weight: normal;
-    color: #fff;
+    font-weight: 500;
 }
 
 .banner-form__overlay {
@@ -96,15 +123,17 @@
 }
 
 .banner-form__input-title {
+    margin: 0;
+    padding: 0;
     position: absolute;
-    top: -25px;
+    top: -11px;
     left: 15px;
     padding: 0 5px 0;
     font-size: 14px;
     line-height: 1.21;
     font-weight: 500;
     color: #e3e3e3;
-    background-color: black;
+    background-color: #a7a7a7;
 }
 
 .banner-form__input {
@@ -119,11 +148,7 @@
     font-size: 14px;
     line-height: 1.21;
     font-weight: normal;
-    color: #fff;
-}
-
-.banner-form__input:focus {
-    outline: none;
+    color: #C1C1C1;
 }
 
 .banner-form__button {
@@ -133,13 +158,23 @@
     background: #D83D38;
     border: none;
     border-radius: 4px;
-    color: #fff;
-    letter-spacing: 0.04em;
+    letter-spacing: 1.6px;
     text-transform: uppercase;
     font-size: 12px;
     line-height: 1.2;
     font-weight: bold;
     cursor: pointer;
+    color: #fff;
+    opacity: 1;
+    transition: opacity .2s ease-in-out;
+}
+
+.banner-form__button:hover {
+    opacity: .7;
+}
+
+.banner-form__button:focus {
+    opacity: .7;
 }
 
 .banner-form__subtitle {
@@ -148,57 +183,72 @@
     align-items: center;
 }
 
-.banner-form__checkbox {
-    position: absolute;
-    width: 14px; /* если у элемента не будет размеров, некоторые браузеры посчитают, что его вообще нет */
-    height: 14px;
-    overflow: hidden; /* без этого свойства тоже сработает, но так наверняка. Мы его ещё изучим, оно скрывает элементы, выходящие за границы родителя */
-    clip: rect(0 0 0 0);
-} 
+.container {
+    display: block;
+    position: relative;
+    padding-left: 26px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 10px;
+    line-height: 1.21;
+    font-weight: normal;
+    color: #d6d6d6;
+}
 
-.visible-checkbox {
-    margin-right: 14px;
-    display: flex;
-    width: 14px;
-    height: 14px;
-    border: 1px solid #797979;
-    box-sizing: border-box;
-    border-radius: 4px;
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
     cursor: pointer;
 }
 
-.visible-checkbox__block {
-    margin: auto;
-    width: 8px;
-    height: 8px;
-    border-radius: 2px;
-    background-color: #d83d38;
-}
-.banner-form__checkbox:disabled + .visible-checkbox .visible-checkbox__block {
-    width: 14px;
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    box-sizing: border-box;
     height: 14px;
-    background-color: #d83d38;
-}
-
-.banner-form__checkbox:disabled:checked + .visible-checkbox .visible-checkbox__block {
     width: 14px;
-    height: 14px;
-    background-color: #d83d38;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #797979;
 }
 
-.banner-form__checkbox:focus + .visible-checkbox .visible-checkbox__block {
-    width: 14px;
-    height: 14px;
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
     background-color: transparent;
 }
-.banner-form__label {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin: 0;
-    padding-left: 14px;
-    font-size: 10px;
-    line-height: 1.21;
-    font-weight: 500;
-    color: #d6d6d6;
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: transparent;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 50%;
+	left: 50%;
+	width: 8px;
+	height: 8px;
+	border-radius: 2px;
+	background: #d83d38;
+    transform: translate(-50%, -50%);
 }
