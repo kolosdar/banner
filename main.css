@@ -1,0 +1,204 @@
+.banner {
+    padding: 15px;
+    box-sizing: border-box;
+    max-width: 1348px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: 'Montserrat';
+}
+
+.banner__logo {
+    width: 144px;
+    height: 144px;
+    margin-right: 27px;
+}
+
+.banner__discount {
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+}
+
+.banner__main-title {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: normal;
+    color: #fff;
+
+}
+
+.banner__span-accent {
+    padding: 5px 4px 6px;
+    background-color: #d83d38;
+}
+
+.banner__span-font-size {
+    font-size: 12px;
+}
+
+.banner__next-title {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: normal;
+    color: #fff;
+}
+
+.banner__info {
+    padding-top: 33px;
+    width: 202px;
+}
+
+.banner__text {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.78;
+    font-weight: normal;
+    color: #d0d0d0;
+}
+
+.banner__phone {
+    margin: 0;
+    padding: 7px 0 0 0;
+    font-size: 22px;
+    line-height: 1.21;
+    font-weight: normal;
+    color: #f23c37;
+}
+
+.banner__arrow {
+    width: 169.1px;
+    height: 90px;
+    background-image: url(images/banner-arrow.svg);
+    background-size: 169.1px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner-form__title {
+    margin: 0;
+    padding: 0 0 13.5px 0;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.5625;
+    font-weight: normal;
+    color: #fff;
+}
+
+.banner-form__overlay {
+    position: relative;
+}
+
+.banner-form__input-title {
+    position: absolute;
+    top: -25px;
+    left: 15px;
+    padding: 0 5px 0;
+    font-size: 14px;
+    line-height: 1.21;
+    font-weight: 500;
+    color: #e3e3e3;
+    background-color: black;
+}
+
+.banner-form__input {
+    display: block;
+    margin: 0;
+    padding: 13.5px 0 14.5px 18.5px;
+    width: 359px;
+    border: 1px solid #7C7C7C;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 1.21;
+    font-weight: normal;
+    color: #fff;
+}
+
+.banner-form__input:focus {
+    outline: none;
+}
+
+.banner-form__button {
+    width: 360px;
+    padding: 18px 0 17px;
+    margin-top: 10.5px;
+    background: #D83D38;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.banner-form__subtitle {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-form__checkbox {
+    position: absolute;
+    width: 14px; /* если у элемента не будет размеров, некоторые браузеры посчитают, что его вообще нет */
+    height: 14px;
+    overflow: hidden; /* без этого свойства тоже сработает, но так наверняка. Мы его ещё изучим, оно скрывает элементы, выходящие за границы родителя */
+    clip: rect(0 0 0 0);
+} 
+
+.visible-checkbox {
+    margin-right: 14px;
+    display: flex;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #797979;
+    box-sizing: border-box;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.visible-checkbox__block {
+    margin: auto;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background-color: #d83d38;
+}
+.banner-form__checkbox:disabled + .visible-checkbox .visible-checkbox__block {
+    width: 14px;
+    height: 14px;
+    background-color: #d83d38;
+}
+
+.banner-form__checkbox:disabled:checked + .visible-checkbox .visible-checkbox__block {
+    width: 14px;
+    height: 14px;
+    background-color: #d83d38;
+}
+
+.banner-form__checkbox:focus + .visible-checkbox .visible-checkbox__block {
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+}
+.banner-form__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 14px;
+    font-size: 10px;
+    line-height: 1.21;
+    font-weight: 500;
+    color: #d6d6d6;
+}
