@@ -25,14 +25,17 @@
 .banner__discount {
     display: flex;
     flex-direction: column;
-   justify-content: space-between;
+    justify-content: space-between;
 }
 
-.banner__main-title {
+.banner__next-title {
     margin: 0;
     padding: 0;
     font-size: 18px;
     line-height: 1.6;
+}
+
+h2 > span + span {
     font-weight: 700;
 }
 
@@ -43,14 +46,6 @@
 
 .banner__span-font-size {
     font-size: 12px;
-}
-
-.banner__next-title {
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-    line-height: 1.6;
-    font-weight: 600;
 }
 
 .banner__info {
@@ -80,14 +75,10 @@
     transition: opacity .2s ease-in-out;
 }
 
-.banner__phone:hover {
-    opacity: .7;
-}
-
+.banner__phone:hover,
 .banner__phone:focus {
     opacity: .7;
 }
-
 
 .banner__arrow {
     width: 169.1px;
@@ -137,7 +128,7 @@
     font-size: 14px;
     line-height: 1.21;
     font-weight: 500;
-    color: #C1C1C1;
+    color: #c1c1c1;
 }
 
 .banner-form__button {
@@ -158,10 +149,7 @@
     transition: opacity .2s ease-in-out;
 }
 
-.banner-form__button:hover {
-    opacity: .7;
-}
-
+.banner-form__button:hover,
 .banner-form__button:focus {
     opacity: .7;
 }
@@ -211,14 +199,11 @@
     border: 1px solid #797979;
 }
 
-.container:hover input ~ .checkmark {
-    background-color: transparent;
-}
-
-
+.container:hover input ~ .checkmark,
 .container input:checked ~ .checkmark {
     background-color: transparent;
 }
+
 
 .checkmark:after {
     content: "";
