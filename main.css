@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
-
 .banner {
     padding: 15px;
     box-sizing: border-box;
     max-width: 1348px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: rgb(34, 34, 34, .4);
+    background-image: url(images/img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     font-family: 'Montserrat', 'Arial', sans-serif;
     font-weight: 600;
     color: #fff;
@@ -18,16 +20,6 @@
     width: 144px;
     height: 144px;
     margin-right: 27px;
-    background-image: url(images/banner-logo.png);
-    background-size: 144px 144px;
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 1;
-    transition: opacity .2s ease-in-out;
-}
-
-.banner__logo:hover {
-    opacity: .7;
 }
 
 .banner__discount {
@@ -76,7 +68,7 @@
 
 .banner__phone {
     margin: 0;
-    padding: 7px 0 0 0;
+    padding-top: 7px;
     text-decoration: none;
     display: inline-block;
     border-bottom: 1px solid #80312F;
@@ -108,7 +100,7 @@
 
 .banner-form__title {
     margin: 0;
-    padding: 0 0 27px 0;
+    padding-bottom: 27px;
     font-size: 16px;
     line-height: 1.5625;
     font-weight: 500;
@@ -129,7 +121,7 @@
     line-height: 1.21;
     font-weight: 500;
     color: #e3e3e3;
-    background-color: #a7a7a7;
+    background-color: transparent;
 }
 
 .banner-form__input {
@@ -141,6 +133,7 @@
     box-sizing: border-box;
     border-radius: 4px;
     background-color: transparent;
+    clip-path: polygon(0% 0%, 9px 0%, 9px 10%, 52% 10%, 52% 0%, 100% 0%, 100% 100%, 0% 100%);
     font-size: 14px;
     line-height: 1.21;
     font-weight: 500;
